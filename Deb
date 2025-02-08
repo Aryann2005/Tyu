@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine Puzzle</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #ffdde1;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .puzzle-container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 200px;
+            height: 200px;
+            background: white;
+            padding: 5px;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+            cursor: pointer;
+        }
+        .piece {
+            width: 50px;
+            height: 50px;
+            background: pink;
+            margin: 2px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            font-weight: bold;
+            color: transparent;
+            transition: 0.5s;
+        }
+        .solved .piece {
+            color: red;
+            background: white;
+        }
+        .message {
+            display: none;
+            font-size: 24px;
+            color: #e60073;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="puzzle-container" onclick="solvePuzzle()">
+        <div class="piece">H</div>
+        <div class="piece">A</div>
+        <div class="piece">P</div>
+        <div class="piece">P</div>
+        <div class="piece">Y</div>
+        <div class="piece">V</div>
+        <div class="piece">A</div>
+        <div class="piece">L</div>
+        <div class="piece">E</div>
+        <div class="piece">N</div>
+        <div class="piece">T</div>
+        <div class="piece">I</div>
+        <div class="piece">N</div>
+        <div class="piece">E</div>
+    </div>
+    <p class="message">Happy Valentine's Day! 💖</p>
+
+    <script>
+        function solvePuzzle() {
+            document.querySelector(".puzzle-container").classList.add("solved");
+            document.querySelector(".message").style.display = "block";
+        }
+    </script>
+</body>
+</html>
